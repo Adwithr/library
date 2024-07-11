@@ -7,25 +7,114 @@
 
 body {
   font-family: Roboto, sans-serif;
+  background-color: rgb(247, 250, 253);
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 2em;
+  padding: 2.5em 3em;
 }
 .navbar svg {
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+#Library-nav {
+  font-size: 32px;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .nav-left,
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1em;
+}
+
+.nav-left {
+  gap: 0.5em;
 }
 
 .nav-right {
   margin-left: auto;
+  gap: 1em;
+}
+.nav-right div {
+  font-size: 23px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.nav-right div:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2.3px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+.nav-right div:hover:after {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3em 0 calc(3.2em + 1px);
+}
+
+.hdr-text {
+  font-size: 24px;
+  font-weight: 501;
+}
+
+.new-book-btn {
+  position: relative;
+  top: -10px;
+  font-size: 14.5px;
+  font-weight: bold;
+  padding: 0.6em 1em 0.6em 1em;
+  background-color: rgb(247, 250, 253);
+  border: 1.5px solid black;
+  border-radius: 17px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.new-book-btn:hover {
+  transform: scale(1.1);
+}
+.new-book-btn:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease-in;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+  padding: 2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  height: 300px;
+  padding: 1em;
+  border-radius: 13.7px;
+}
+.card .title {
+  text-align: center;
+}
+
+.card-last-rw {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
 }

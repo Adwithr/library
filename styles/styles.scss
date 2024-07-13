@@ -5,11 +5,15 @@
   box-sizing: border-box;
 }
 
-$bg-color: rgb(247, 250, 253);
+// $bg-color: rgb(247, 250, 253);
+$bg-color: #f7f9f2;
 
 body {
   font-family: Roboto, sans-serif;
   background-color: $bg-color;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .navbar {
@@ -87,6 +91,9 @@ body {
   border-radius: 17px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   &:hover {
     transform: scale(1.1);
   }
@@ -94,6 +101,13 @@ body {
     transform: scale(0.9);
     transition: transform 0.1s ease-in;
   }
+}
+
+dialog {
+  margin: auto;
+  height: 400px;
+  width: 300px;
+  background-color: $bg-color;
 }
 
 .content {
@@ -110,6 +124,9 @@ body {
   height: 300px;
   padding: 1em;
   border-radius: 14.5px;
+  -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
   .title {
     text-align: center;
     font-size: 18px;
@@ -181,7 +198,7 @@ body {
       transform: scale(1.25);
       transition: transform 0.1s ease-in;
       border-radius: 50%;
-      background-color: hsl(0, 0%, 95%);
+      background-color: hsl(0, 0%, 88%);
     }
     &:active {
       transform: scale(0.88);

@@ -23,6 +23,31 @@
     </div>
     <div class="header">
       <div class="hdr-text">Make your personalised library</div>
+      <dialog>
+        <form>
+          <div>
+            <p>Title:</p>
+            <input type="text" id="book-title" name="title" required />
+          </div>
+          <div>
+            <p>Author:</p>
+            <input type="text" id="book-author" name="author" required />
+          </div>
+          <div>
+            <p>Pages:</p>
+            <input type="number" name="pages" id="book-pages" required autocomplete="off" />
+          </div>
+          <div>
+            <p>
+              <label for="book-read-status">Have you read the book?<input type="checkbox" name="read-status" id="book-read-status" /></label>
+            </p>
+          </div>
+          <div>
+            <button id="cancel">Cancel</button>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </dialog>
       <button class="new-book-btn">Add new book</button>
     </div>
     <div class="content">

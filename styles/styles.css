@@ -7,7 +7,10 @@
 
 body {
   font-family: Roboto, sans-serif;
-  background-color: rgb(247, 250, 253);
+  background-color: #f7f9f2;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar {
@@ -80,11 +83,12 @@ body {
   font-size: 14.5px;
   font-weight: bold;
   padding: 0.6em 1em 0.6em 1em;
-  background-color: rgb(247, 250, 253);
+  background-color: #f7f9f2;
   border: 1.5px solid black;
   border-radius: 17px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
 .new-book-btn:hover {
   transform: scale(1.1);
@@ -92,6 +96,13 @@ body {
 .new-book-btn:active {
   transform: scale(0.9);
   transition: transform 0.1s ease-in;
+}
+
+dialog {
+  margin: auto;
+  height: 400px;
+  width: 300px;
+  background-color: #f7f9f2;
 }
 
 .content {
@@ -108,6 +119,7 @@ body {
   height: 300px;
   padding: 1em;
   border-radius: 14.5px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 }
 .card .title {
   text-align: center;
@@ -152,7 +164,7 @@ body {
 }
 
 .status-change-btn {
-  background-color: rgb(247, 250, 253);
+  background-color: #f7f9f2;
   border: 1px solid black;
   font-weight: bold;
   padding: 0.5em 0.8em;
@@ -179,7 +191,7 @@ body {
   transform: scale(1.25);
   transition: transform 0.1s ease-in;
   border-radius: 50%;
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 0%, 88%);
 }
 .remove-card svg:active {
   transform: scale(0.88);

@@ -221,9 +221,9 @@ input[type=checkbox] {
   font-weight: 501;
 }
 
-#author-name,
-#page-num,
-#status-rn {
+.author-name,
+.page-num,
+.status-rn {
   font-weight: normal;
 }
 
@@ -250,7 +250,7 @@ input[type=checkbox] {
   transition: transform 0.1s ease-in;
 }
 
-.remove-card svg {
+.remove-card img {
   height: 23px;
   width: 23px;
   display: inline-block;
@@ -258,13 +258,13 @@ input[type=checkbox] {
   cursor: pointer;
   margin-right: 2px;
 }
-.remove-card svg:hover {
+.remove-card img:hover {
   transform: scale(1.25);
   transition: transform 0.1s ease-in;
   border-radius: 50%;
   background-color: hsl(0, 0%, 88%);
 }
-.remove-card svg:active {
+.remove-card img:active {
   transform: scale(0.88);
   transition: transform 0.1s ease-in;
 }

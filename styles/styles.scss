@@ -224,9 +224,9 @@ input[type="checkbox"] {
   font-weight: 501;
 }
 
-#author-name,
-#page-num,
-#status-rn {
+.author-name,
+.page-num,
+.status-rn {
   font-weight: normal;
 }
 
@@ -254,7 +254,7 @@ input[type="checkbox"] {
 }
 
 .remove-card {
-  svg {
+  img {
     height: 23px;
     width: 23px;
     display: inline-block;

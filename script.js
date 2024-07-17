@@ -66,7 +66,7 @@ function displayBook() {
     if (statusRn.textContent == "Read") statusChangeBtnStatus.textContent = "Unread";
     else statusChangeBtnStatus.textContent = "Read";
     remove.classList.add("remove-card");
-    image.src = "./delete.svg";
+    image.src = "./Assets/delete.svg";
     image.alt = "remove";
     card.appendChild(title);
     card.appendChild(cardMiddleRow);
@@ -82,6 +82,22 @@ function displayBook() {
     cardLastRow.appendChild(remove);
     remove.appendChild(image);
     document.querySelector(".content").appendChild(card);
+    statusChangeBtn.addEventListener("click", () => {
+      if (statusRn.textContent == "Read") {
+        statusChangeBtnStatus.textContent = "Read";
+        statusRn.textContent = "Unread";
+        myLibrary[i].read = false;
+      } else {
+        statusChangeBtnStatus.textContent = "Unread";
+        statusRn.textContent = "Read";
+        myLibrary[i].read = true;
+      }
+    });
+    remove.addEventListener("click", () => {
+      const cardRemove = remove.closest(".card");
+      cardRemove.remove();
+      myLibrary.splice(i, 1);
+    });
   }
 }
 
@@ -106,15 +122,13 @@ addNewBookBtn.addEventListener("click", () => {
 cancel.addEventListener("click", (e) => {
   e.preventDefault();
   dialogBox.close();
+  clearInput();
 });
 
 submit.addEventListener("click", () => {
   const inputs = dialogBox.querySelectorAll("input[type='text'], input[type='number']");
   const isEmpty = [...inputs].some((input) => input.value.trim() === "");
-  if (isEmpty) {
-    alert("Please fill in all required fields.");
-    return;
-  }
+  if (isEmpty) return;
   addBookToLibrary();
   dialogBox.close();
 });

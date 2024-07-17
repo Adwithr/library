@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-// $bg-color: rgb(247, 250, 253);
 $bg-color: #f7f9f2;
 
 body {
@@ -19,8 +18,12 @@ body {
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 2.5em 3em;
-  svg {
+  padding: 2.45em 3em;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+  img {
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -48,8 +51,10 @@ body {
 .nav-right {
   margin-left: auto;
   gap: 1em;
-  div {
-    font-size: 23px;
+  div,
+  a {
+    color: black;
+    font-size: 23.7px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
@@ -85,12 +90,11 @@ body {
 
 .new-book-btn {
   position: relative;
-  top: -10px;
-  font-size: 14.5px;
+  font-size: 15.3px;
   font-weight: bold;
   padding: 0.6em 1em 0.6em 1em;
   background-color: $bg-color;
-  border: 1.5px solid black;
+  border: 2px solid black;
   border-radius: 17px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -186,7 +190,7 @@ input[type="checkbox"] {
 .card {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  border: 2.1px solid black;
   height: 300px;
   padding: 1em;
   border-radius: 14.5px;
